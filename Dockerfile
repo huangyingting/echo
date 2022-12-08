@@ -5,4 +5,5 @@ RUN apk --no-cache add curl && \
     chgrp -R 0 /usr/local/openresty/nginx/ && \
     chmod -R g=u /usr/local/openresty/nginx/
 ENV VERSION=$version
+ENV ENVIRONMENT=
 EXPOSE 8080
