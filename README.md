@@ -9,7 +9,7 @@ A github workflow is also included to push image to ghcr.io
 `docker run -it --rm -p 8080:8080 -e repository/repo/echo`
 
 ## How to use it
-  ```ShellSession
+  ```shell
   # Get
   curl http://localhost:8080
   GET / HTTP/1.1
@@ -57,3 +57,11 @@ A github workflow is also included to push image to ghcr.io
   Service Unavailable
 
   ```
+
+## Deploy to kubernetes
+Open echo.yaml, replace `echo.example.com` to `your echo domain name`, then
+
+```shell
+kubectl create ns echo
+kubectl apply -f echo.yaml -n echo
+```
